@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "lint": "eslint src --ext .ts  --fix"
+    "lint": "eslint src --ext .ts  --fix",
+    "knex": "node --import tsx ./node_modules/.bin/knex"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@types/node": "^20.10.6",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
+    "ts-node": "^10.9.2",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3"
   },
