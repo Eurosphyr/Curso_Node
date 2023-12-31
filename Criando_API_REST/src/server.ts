@@ -4,9 +4,10 @@ import { knex } from "./database";
 const app = fastify();
 
 app.get("/hello", async () => {
-  const test = knex("sqlite_schema").select("*");
-
-  return test;
+  const transactions = await knex("transactions")
+    .where("amount", 1000)
+    .select("*");
+  return transactions;
 });
 
 app
